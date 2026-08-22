@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://winslausokhala.github.io/sitemap.xml
