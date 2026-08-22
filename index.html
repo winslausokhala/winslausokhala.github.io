@@ -3,494 +3,859 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Okhala Winslaus Ondwasi — Statistics Tutoring</title>
-<meta name="description" content="One-on-one statistics tutoring with Okhala Winslaus Ondwasi — hypothesis testing, R, SPSS, Excel, and university coursework support, online or in Nairobi.">
+<title>Okhala Winslaus Ondwasi — Data Analyst, Statistics Teacher & Tutor</title>
+<meta name="description" content="Okhala Winslaus Ondwasi is a data analyst and statistics teacher based in Nairobi, Kenya, offering data analysis work and one-on-one statistics tutoring in R, SPSS, Excel, and Python.">
 <meta name="author" content="Okhala Winslaus Ondwasi">
 <link rel="canonical" href="https://winslausokhala.github.io/">
-<meta property="og:title" content="Okhala Winslaus Ondwasi — Statistics Tutoring">
-<meta property="og:description" content="One-on-one statistics tutoring — hypothesis testing, R, SPSS, Excel, coursework support.">
+<meta property="og:title" content="Okhala Winslaus Ondwasi — Data Analyst, Statistics Teacher & Tutor">
+<meta property="og:description" content="Data analyst, statistics teacher, and tutor based in Nairobi, Kenya.">
+<meta property="og:url" content="https://winslausokhala.github.io/">
+<meta property="og:type" content="profile">
 <meta property="og:image" content="https://winslausokhala.github.io/wins.jpg">
-<meta property="og:type" content="website">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Statistics Tutoring",
-  "provider": {
-    "@type": "Person",
-    "name": "Okhala Winslaus Ondwasi",
-    "email": "mailto:Winslausokhala@gmail.com",
-    "sameAs": ["https://www.linkedin.com/in/winslaus-okhala-861024409", "https://github.com/AngelVanywinner"]
-  },
-  "areaServed": "Kenya",
-  "availableChannel": {
-    "@type": "ServiceChannel",
-    "availableLanguage": "English"
+  "@type": "Person",
+  "name": "Okhala Winslaus Ondwasi",
+  "alternateName": ["Winslaus Okhala", "Okhala Winslaus", "Winslaus Ondwasi"],
+  "jobTitle": "Data Analyst, Statistics Teacher & Tutor",
+  "url": "https://winslausokhala.github.io/",
+  "image": "https://winslausokhala.github.io/wins.jpg",
+  "email": "mailto:Winslausokhala@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/winslaus-okhala-861024409",
+    "https://github.com/AngelVanywinner"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "Kenya"
   }
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* ============ TOKENS ============ */
   :root{
-    --paper:#F5F0E6;
-    --paper-line:#DCD0B4;
-    --ink:#1C2541;
-    --ink-soft:#3C4566;
-    --red:#B23A2E;
-    --green:#24402C;
-    --green-soft:#2F5233;
-    --gold:#C99A3E;
-    --serif:'Source Serif 4', serif;
-    --sans:'Inter', sans-serif;
-    --mono:'IBM Plex Mono', monospace;
-    --pen:'Caveat', cursive;
+    --ink:#12203f;         /* deep navy — dark sections */
+    --ink-soft:#1c2f57;
+    --paper:#f5f4ef;       /* graph-paper white */
+    --paper-line:#e2e0d5;  /* grid lines on paper */
+    --card:#ffffff;
+    --text-main:#1b2333;
+    --text-muted:#5b6b8c;
+    --text-on-ink:#eef0f6;
+    --text-on-ink-muted:#9fabc9;
+    --chalk:#eac54f;       /* accent 1 — highlight / chalk yellow */
+    --teal:#3f8f82;        /* accent 2 — positive / correct */
+    --red:#c1443c;         /* accent 3 — regression line / flag */
+    --line:#c9cbb8;
+
+    --display: 'Fraunces', serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+
+    --max: 1120px;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  }
+
   body{
+    margin:0;
     background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
+    color:var(--text-main);
+    font-family:var(--body);
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  a{color:inherit;}
-  img{max-width:100%; display:block;}
-  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
 
-  /* ---------- header ---------- */
-  header{
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  :focus-visible{
+    outline:2px solid var(--chalk);
+    outline-offset:3px;
+  }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 28px; }
+
+  /* faint graph-paper grid on light sections */
+  .grid-bg{
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size:36px 36px;
+    background-position:-1px -1px;
+  }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    display:flex;
+    align-items:center;
+    gap:.6em;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px; height:1px;
+    background:var(--red);
+    display:inline-block;
+  }
+
+  h1,h2,h3{
+    font-family:var(--display);
+    font-weight:600;
+    margin:0;
+    letter-spacing:-.01em;
+  }
+
+  .section-title{
+    font-size:clamp(1.6rem, 3vw, 2.2rem);
+    margin-bottom:.3em;
+  }
+  .section-lede{
+    color:var(--text-muted);
+    max-width:52ch;
+    margin:0 0 2.4rem;
+  }
+
+  section{ padding:5.5rem 0; }
+  @media (max-width:700px){ section{ padding:3.6rem 0; } }
+
+  /* ============ NAV ============ */
+  header.site-nav{
     position:sticky; top:0; z-index:50;
-    background:rgba(245,240,230,0.92);
-    backdrop-filter:blur(6px);
+    background:rgba(245,244,239,.86);
+    backdrop-filter:blur(8px);
     border-bottom:1px solid var(--paper-line);
   }
-  .nav{
+  .nav-inner{
+    max-width:var(--max); margin:0 auto; padding:16px 28px;
     display:flex; align-items:center; justify-content:space-between;
-    padding:18px 28px;
-    max-width:1040px; margin:0 auto;
   }
-  .brand{
-    font-family:var(--serif); font-weight:700; font-size:1.15rem;
-    letter-spacing:-0.01em;
+  .nav-mark{
+    font-family:var(--mono); font-weight:600; font-size:.9rem;
+    letter-spacing:.02em;
   }
-  .brand span{color:var(--red);}
-  nav.links{display:flex; gap:28px; font-size:0.92rem; font-weight:500;}
-  nav.links a{text-decoration:none; color:var(--ink-soft); transition:color .15s;}
-  nav.links a:hover{color:var(--red);}
-  .nav-cta{
-    font-family:var(--mono); font-size:0.82rem; font-weight:600;
-    background:var(--red); color:var(--paper);
-    padding:9px 16px; border-radius:3px; text-decoration:none;
-    white-space:nowrap;
+  .nav-mark span{ color:var(--red); }
+  .nav-links{
+    display:flex; gap:1.8rem; list-style:none; margin:0; padding:0;
+    font-family:var(--mono); font-size:.78rem; letter-spacing:.04em;
   }
-  .nav-cta:hover{background:#963025;}
-  @media (max-width:720px){ nav.links{display:none;} }
+  .nav-links a{
+    text-decoration:none; color:var(--text-muted);
+    padding-bottom:3px; border-bottom:1px solid transparent;
+    transition:color .15s, border-color .15s;
+  }
+  .nav-links a:hover{ color:var(--ink); border-color:var(--chalk); }
+  @media (max-width:640px){ .nav-links{ display:none; } }
 
-  /* ---------- hero ---------- */
+  /* ============ HERO ============ */
   .hero{
+    background:var(--ink);
+    color:var(--text-on-ink);
+    padding:4.5rem 0 4rem;
     position:relative;
-    padding:88px 28px 96px;
-    background-image: repeating-linear-gradient(var(--paper) 0px, var(--paper) 37px, var(--paper-line) 38px);
     overflow:hidden;
   }
-  .hero::before{
-    content:"";
-    position:absolute; left:64px; top:0; bottom:0; width:2px;
-    background:rgba(178,58,46,0.28);
-  }
-  .hero-inner{max-width:1040px; margin:0 auto; position:relative;}
-  .eyebrow{
-    font-family:var(--mono); font-size:0.78rem; letter-spacing:0.08em;
-    text-transform:uppercase; color:var(--green-soft); font-weight:600;
-    margin-bottom:18px; display:block;
-  }
-  h1{
-    font-family:var(--serif); font-weight:700;
-    font-size:clamp(2.4rem, 5.2vw, 4rem);
-    line-height:1.08; letter-spacing:-0.02em;
-    max-width:820px; position:relative;
-  }
-  .mark-wrap{position:relative; display:inline-block;}
-  .mark-wrap svg{
-    position:absolute; left:-8%; top:-18%; width:116%; height:140%;
-    pointer-events:none;
-  }
-  .mark-wrap svg path{
-    fill:none; stroke:var(--red); stroke-width:4;
-    stroke-linecap:round; stroke-linejoin:round;
-    stroke-dasharray:600; stroke-dashoffset:600;
-    animation:draw 1.1s 0.5s ease-out forwards;
-  }
-  @keyframes draw{ to{ stroke-dashoffset:0; } }
-  .hero p.lede{
-    font-size:1.18rem; color:var(--ink-soft); max-width:560px;
-    margin-top:26px;
-  }
-  .hero-cta{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;}
-  .btn{
-    font-family:var(--mono); font-size:0.88rem; font-weight:600;
-    padding:13px 22px; border-radius:3px; text-decoration:none;
-    display:inline-flex; align-items:center; gap:8px;
-    transition:transform .12s, background .15s;
-  }
-  .btn:hover{transform:translateY(-1px);}
-  .btn-primary{background:var(--red); color:var(--paper);}
-  .btn-primary:hover{background:#963025;}
-  .btn-ghost{background:transparent; color:var(--ink); border:1.5px solid var(--ink);}
-  .btn-ghost:hover{border-color:var(--red); color:var(--red);}
-  .annotation{
-    font-family:var(--pen); font-size:1.35rem; color:var(--red);
-    position:absolute; right:0; top:6px; transform:rotate(-4deg);
-    display:none;
-  }
-  @media (min-width:860px){ .annotation{display:block;} }
-
-  /* ---------- report card ---------- */
-  .report{
-    background:var(--green);
-    color:var(--paper);
-    padding:56px 28px;
-  }
-  .report-inner{
-    max-width:1040px; margin:0 auto;
-    display:grid; grid-template-columns:auto 1fr; gap:40px;
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:3rem;
     align-items:center;
   }
-  .report-photo{
-    width:132px; height:132px; border-radius:4px; overflow:hidden;
-    border:3px solid var(--gold); flex-shrink:0;
+  @media (max-width:880px){
+    .hero .wrap{ grid-template-columns:1fr; }
   }
-  .report-photo img{width:100%; height:100%; object-fit:cover; object-position:top center;}
-  .report-grid{
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:22px 32px;
+  .hero-eyebrow{
+    font-family:var(--mono); font-size:.72rem; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-on-ink-muted);
+    display:flex; align-items:center; gap:.6em; margin-bottom:1.4rem;
   }
-  .report-item .label{
-    font-family:var(--mono); font-size:0.72rem; text-transform:uppercase;
-    letter-spacing:0.07em; color:var(--gold); margin-bottom:6px;
+  .hero-eyebrow::before{ content:""; width:18px; height:1px; background:var(--chalk); }
+  .hero h1{
+    font-size:clamp(2.4rem, 5.4vw, 4rem);
+    line-height:1.03;
+    color:#fff;
   }
-  .report-item .value{font-family:var(--serif); font-size:1.05rem; font-weight:600;}
-  @media (max-width:640px){ .report-inner{grid-template-columns:1fr; text-align:center;} .report-photo{margin:0 auto;} }
+  .hero h1 em{
+    font-style:italic; color:var(--chalk); font-weight:500;
+  }
+  .hero p.tagline{
+    margin:1.3rem 0 2rem;
+    max-width:46ch;
+    font-size:1.08rem;
+    color:var(--text-on-ink-muted);
+  }
+  .hero-ctas{ display:flex; gap:.9rem; flex-wrap:wrap; margin-bottom:2.6rem; }
+  .btn{
+    font-family:var(--mono); font-size:.82rem; letter-spacing:.03em;
+    padding:.85em 1.4em;
+    border-radius:3px;
+    text-decoration:none;
+    display:inline-block;
+    border:1px solid transparent;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn-primary{ background:var(--chalk); color:#241c04; }
+  .btn-primary:hover{ transform:translateY(-2px); }
+  .btn-ghost{ border-color:rgba(238,240,246,.3); color:var(--text-on-ink); }
+  .btn-ghost:hover{ border-color:var(--chalk); color:var(--chalk); transform:translateY(-2px); }
 
-  /* ---------- syllabus ---------- */
-  section{padding:80px 28px;}
-  .section-head{max-width:640px; margin-bottom:48px;}
-  .section-head .eyebrow{color:var(--red);}
-  h2{font-family:var(--serif); font-size:clamp(1.8rem,3.4vw,2.6rem); font-weight:700; letter-spacing:-0.01em;}
-  .section-head p{color:var(--ink-soft); margin-top:12px; font-size:1.05rem;}
+  .hero-stats{
+    display:flex; gap:2.2rem; flex-wrap:wrap;
+    font-family:var(--mono);
+  }
+  .hero-stats div{ font-size:.76rem; color:var(--text-on-ink-muted); }
+  .hero-stats strong{
+    display:block; font-size:1.3rem; color:#fff; font-weight:600;
+  }
 
-  .syllabus-list{border-top:1px solid var(--paper-line);}
-  .unit{
-    display:grid; grid-template-columns:64px 1fr; gap:24px;
-    padding:26px 0; border-bottom:1px solid var(--paper-line);
-    align-items:baseline;
+  /* hero scatter chart */
+  .hero-chart{ position:relative; }
+  .hero-chart svg{ width:100%; height:auto; overflow:visible; }
+  .reg-line{
+    stroke:var(--red);
+    stroke-width:2.5;
+    fill:none;
+    stroke-dasharray:520;
+    stroke-dashoffset:520;
+    animation:draw 1.6s .3s ease forwards;
   }
-  .unit .num{
-    font-family:var(--mono); font-size:0.95rem; color:var(--red); font-weight:600;
+  .ci-band{ fill:var(--chalk); opacity:.14; }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  .dot{ fill:var(--text-on-ink-muted); opacity:.55; }
+  .dot-you{ fill:var(--chalk); }
+  .chart-label{
+    font-family:var(--mono); font-size:9px; fill:var(--text-on-ink-muted);
+    letter-spacing:.05em;
   }
-  .unit h3{font-family:var(--serif); font-size:1.25rem; font-weight:600; margin-bottom:6px;}
-  .unit p{color:var(--ink-soft); font-size:0.97rem; max-width:600px;}
 
-  /* ---------- how it works ---------- */
-  .steps{
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-    gap:28px;
+  /* ============ ABOUT ============ */
+  .about-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:3.2rem;
+    align-items:start;
   }
-  .step{
-    background:#fff; border:1px solid var(--paper-line); border-radius:6px;
-    padding:26px 22px; position:relative;
-  }
-  .step .step-num{
-    font-family:var(--serif); font-size:2rem; font-weight:700;
-    color:var(--paper-line); position:absolute; top:16px; right:18px;
-  }
-  .step h4{font-family:var(--serif); font-size:1.08rem; font-weight:600; margin-bottom:8px; padding-right:30px;}
-  .step p{color:var(--ink-soft); font-size:0.93rem;}
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; } }
 
-  /* ---------- format / rates ---------- */
-  .format-band{
-    background:#fff; border:1px solid var(--paper-line); border-radius:8px;
-    padding:36px 32px; display:flex; gap:32px; flex-wrap:wrap;
-    justify-content:space-between; align-items:center;
+  .avatar-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:1.6rem;
   }
-  .format-item{flex:1; min-width:200px;}
-  .format-item .label{font-family:var(--mono); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--red); margin-bottom:8px;}
-  .format-item .value{font-family:var(--serif); font-size:1.15rem; font-weight:600;}
-  .format-item p{color:var(--ink-soft); font-size:0.92rem; margin-top:4px;}
+  .avatar{
+    width:100%; aspect-ratio:1/1;
+    border-radius:4px;
+    background:linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--chalk);
+    font-family:var(--display); font-weight:600; font-size:3.4rem;
+    margin-bottom:1.2rem;
+  }
+  .facts{ list-style:none; margin:0; padding:0; font-family:var(--mono); font-size:.82rem; }
+  .facts li{
+    display:flex; justify-content:space-between; gap:1rem;
+    padding:.55em 0;
+    border-top:1px dashed var(--line);
+    color:var(--text-muted);
+  }
+  .facts li span:last-child{ color:var(--text-main); text-align:right; }
 
-  /* ---------- contact ---------- */
+  .about-copy p{ margin:0 0 1.1em; color:var(--text-main); }
+  .about-copy p.lead{
+    font-family:var(--display); font-size:1.3rem; font-weight:500;
+    color:var(--ink); line-height:1.45;
+  }
+
+  /* ============ SKILLS ============ */
+  .skills-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem 3.5rem;
+  }
+  @media (max-width:700px){ .skills-cols{ grid-template-columns:1fr; } }
+  .skills-group h3{
+    font-family:var(--mono); font-size:.78rem; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--text-muted); font-weight:600;
+    margin-bottom:1.3rem;
+  }
+  .bar-row{ margin-bottom:1.15rem; }
+  .bar-row-head{
+    display:flex; justify-content:space-between;
+    font-size:.9rem; margin-bottom:.4em;
+  }
+  .bar-row-head span:last-child{
+    font-family:var(--mono); font-size:.78rem; color:var(--text-muted);
+  }
+  .bar-track{
+    height:8px; background:var(--paper-line);
+    border-radius:2px; overflow:hidden;
+  }
+  .bar-fill{
+    height:100%;
+    background:var(--ink);
+    border-radius:2px;
+    width:0;
+    transition:width 1.1s cubic-bezier(.2,.8,.2,1);
+  }
+  .skills-group.teach .bar-fill{ background:var(--teal); }
+  .bar-row.revealed .bar-fill{ width:var(--pct); }
+
+  /* ============ EXPERIENCE ============ */
+  .timeline{ position:relative; margin-top:2.5rem; padding-left:26px; }
+  .timeline::before{
+    content:""; position:absolute; left:5px; top:4px; bottom:4px;
+    width:1px; background:var(--line);
+  }
+  .tl-item{ position:relative; padding-bottom:2.6rem; }
+  .tl-item:last-child{ padding-bottom:0; }
+  .tl-item::before{
+    content:""; position:absolute; left:-26px; top:5px;
+    width:11px; height:11px; border-radius:50%;
+    background:var(--paper); border:2px solid var(--red);
+  }
+  .tl-date{
+    font-family:var(--mono); font-size:.76rem; color:var(--text-muted);
+    letter-spacing:.03em; margin-bottom:.3em;
+  }
+  .tl-role{ font-family:var(--display); font-size:1.2rem; font-weight:600; margin-bottom:.15em; }
+  .tl-org{ color:var(--red); font-size:.92rem; margin-bottom:.5em; font-weight:500; }
+  .tl-desc{ color:var(--text-muted); max-width:60ch; font-size:.96rem; }
+
+  /* ============ PHILOSOPHY CALLOUT ============ */
+  .callout{
+    border:1px dashed var(--red);
+    border-radius:6px;
+    padding:2.4rem clamp(1.4rem,4vw,3rem);
+    background:var(--card);
+    position:relative;
+  }
+  .callout::before{
+    content:"H\2081 : teaching changes outcomes";
+    position:absolute; top:-11px; left:24px;
+    background:var(--paper); padding:0 .6em;
+    font-family:var(--mono); font-size:.68rem; letter-spacing:.05em;
+    color:var(--red);
+  }
+  .callout blockquote{
+    margin:0; font-family:var(--display); font-style:italic;
+    font-size:clamp(1.15rem,2.4vw,1.55rem); font-weight:500;
+    color:var(--ink); line-height:1.5;
+  }
+  .callout cite{
+    display:block; font-style:normal; font-family:var(--mono);
+    font-size:.78rem; color:var(--text-muted); margin-top:1.2rem;
+  }
+
+  /* ============ PROJECTS ============ */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1.6rem;
+  }
+  @media (max-width:880px){ .cards{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:600px){ .cards{ grid-template-columns:1fr; } }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:1.5rem;
+    display:flex; flex-direction:column; gap:.9rem;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 14px 30px -18px rgba(18,32,63,.35); }
+  .card svg{ width:100%; height:56px; }
+  .card h3{ font-size:1.05rem; }
+  .card p{ margin:0; color:var(--text-muted); font-size:.92rem; }
+  .tags{ display:flex; gap:.5rem; flex-wrap:wrap; margin-top:auto; }
+  .tag{
+    font-family:var(--mono); font-size:.68rem; letter-spacing:.03em;
+    padding:.3em .6em; border-radius:3px;
+    background:var(--paper); border:1px solid var(--line); color:var(--text-muted);
+  }
+
+  /* ============ TESTIMONIALS ============ */
+  .quotes{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1.6rem;
+  }
+  @media (max-width:700px){ .quotes{ grid-template-columns:1fr; } }
+  .quote-card{
+    background:var(--card); border:1px solid var(--line); border-radius:6px;
+    padding:1.6rem;
+  }
+  .quote-card .val{
+    font-family:var(--mono); font-size:.7rem; color:var(--teal);
+    margin-bottom:.7em; letter-spacing:.04em;
+  }
+  .quote-card p{ margin:0 0 1em; font-family:var(--display); font-size:1.02rem; line-height:1.55; }
+  .quote-card footer{ font-family:var(--mono); font-size:.76rem; color:var(--text-muted); }
+
+  /* ============ CONTACT ============ */
   .contact{
-    background:var(--ink); color:var(--paper);
+    background:var(--ink); color:var(--text-on-ink);
   }
-  .contact .section-head .eyebrow{color:var(--gold);}
-  .contact .section-head p{color:#B9BFD6;}
-  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
-  @media (max-width:760px){ .contact-grid{grid-template-columns:1fr;} }
-  .field{margin-bottom:20px;}
-  .field label{
-    display:block; font-family:var(--mono); font-size:0.78rem;
-    text-transform:uppercase; letter-spacing:0.06em; color:var(--gold); margin-bottom:8px;
+  .contact .section-title{ color:#fff; }
+  .contact .section-lede{ color:var(--text-on-ink-muted); }
+  .kv{
+    font-family:var(--mono); font-size:1rem;
+    display:flex; flex-direction:column; gap:.9rem; margin-top:2rem;
   }
-  .field input, .field textarea, .field select{
-    width:100%; background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.22); border-radius:4px;
-    padding:12px 14px; color:var(--paper); font-family:var(--sans); font-size:0.96rem;
+  .kv a{
+    text-decoration:none; color:var(--text-on-ink);
+    display:inline-flex; gap:.6em; align-items:baseline;
+    border-bottom:1px solid transparent;
+    transition:border-color .15s, color .15s;
+    width:fit-content;
   }
-  .field input::placeholder, .field textarea::placeholder{color:#8890AA;}
-  .field textarea{resize:vertical; min-height:96px;}
-  .field select{appearance:none;}
-  .contact-actions{display:flex; gap:14px; flex-wrap:wrap; margin-top:8px;}
-  .btn-wa{background:#2FA84F; color:#fff;}
-  .btn-wa:hover{background:#268a41;}
-  .btn-email{background:transparent; color:var(--paper); border:1.5px solid rgba(255,255,255,0.4);}
-  .btn-email:hover{border-color:var(--gold); color:var(--gold);}
-  .form-note{font-size:0.82rem; color:#8890AA; margin-top:14px;}
+  .kv a:hover{ color:var(--chalk); border-color:var(--chalk); }
+  .kv .k{ color:var(--text-on-ink-muted); }
 
-  .direct-contact{
-    border-left:2px solid var(--gold); padding-left:22px;
+  footer.site-foot{
+    background:var(--ink); color:var(--text-on-ink-muted);
+    border-top:1px solid rgba(238,240,246,.12);
+    padding:1.6rem 0;
+    font-family:var(--mono); font-size:.74rem;
   }
-  .direct-contact .row{margin-bottom:22px;}
-  .direct-contact .row .label{font-family:var(--mono); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--gold); margin-bottom:6px;}
-  .direct-contact .row a{font-family:var(--serif); font-size:1.1rem; text-decoration:none; border-bottom:1px solid rgba(245,240,230,0.3);}
-  .direct-contact .row a:hover{border-color:var(--paper);}
+  .site-foot .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem; }
 
-  footer{
-    background:var(--ink); border-top:1px solid rgba(255,255,255,0.1);
-    padding:28px; text-align:center; color:#8890AA; font-size:0.85rem;
-  }
-  footer a{color:#B9BFD6; text-decoration:none;}
-  footer a:hover{color:var(--gold);}
+  /* reveal-on-scroll */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  .avatar{
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:4px;
+  overflow:hidden;
+  background:linear-gradient(135deg, #12203f 0%, #1c2f57 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-  @media (prefers-reduced-motion: reduce){
-    .mark-wrap svg path{animation:none; stroke-dashoffset:0;}
-    html{scroll-behavior:auto;}
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}  /* ============ TUTORING ============ */
+  .tutoring{ background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .tut-head{ display:grid; grid-template-columns:1.1fr .9fr; gap:2.4rem; align-items:start; margin-bottom:2.6rem; }
+  @media (max-width:820px){ .tut-head{ grid-template-columns:1fr; } }
+  .stamp-wrap{ position:relative; display:inline-block; }
+  .stamp-wrap svg{
+    position:absolute; left:-8%; top:-22%; width:118%; height:150%;
+    pointer-events:none;
   }
+  .stamp-wrap svg path{
+    fill:none; stroke:var(--red); stroke-width:3.5;
+    stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray:600; stroke-dashoffset:600;
+  }
+  .tutoring.in .stamp-wrap svg path{ animation:draw 1.1s .2s ease-out forwards; }
+  .tut-rates{
+    background:var(--paper); border:1px solid var(--line); border-radius:6px;
+    padding:1.6rem 1.8rem; font-family:var(--mono); font-size:.86rem;
+  }
+  .tut-rates .row{ display:flex; justify-content:space-between; padding:.6em 0; border-top:1px dashed var(--line); color:var(--text-muted); }
+  .tut-rates .row:first-child{ border-top:none; }
+  .tut-rates .row span:last-child{ color:var(--text-main); text-align:right; }
+
+  .syllabus{ border-top:1px solid var(--line); margin-top:1rem; }
+  .syl-unit{
+    display:grid; grid-template-columns:52px 1fr; gap:20px;
+    padding:1.3rem 0; border-bottom:1px solid var(--line); align-items:baseline;
+  }
+  .syl-unit .num{ font-family:var(--mono); font-size:.86rem; color:var(--red); font-weight:600; }
+  .syl-unit h4{ font-family:var(--display); font-size:1.08rem; font-weight:600; margin:0 0 .3em; }
+  .syl-unit p{ margin:0; color:var(--text-muted); font-size:.92rem; max-width:58ch; }
+
+  .tut-steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; margin-top:2.2rem; }
+  @media (max-width:820px){ .tut-steps{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:520px){ .tut-steps{ grid-template-columns:1fr; } }
+  .tut-step{ background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:1.2rem; position:relative; }
+  .tut-step .n{ font-family:var(--display); font-size:1.6rem; font-weight:700; color:var(--paper-line); position:absolute; top:.8rem; right:1rem; }
+  .tut-step h5{ font-family:var(--display); font-size:.98rem; font-weight:600; margin:0 0 .4em; padding-right:1.6rem; }
+  .tut-step p{ margin:0; color:var(--text-muted); font-size:.85rem; }
+
+  .tut-cta{ display:flex; gap:.9rem; flex-wrap:wrap; margin-top:2.4rem; }
+  .btn-wa{ background:#2FA84F; color:#fff; }
+  .btn-wa:hover{ transform:translateY(-2px); }
+
 </style>
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <div class="brand">Okhala <span>Winslaus</span></div>
-    <nav class="links">
-      <a href="#syllabus">Syllabus</a>
-      <a href="#how">How it works</a>
-      <a href="#format">Format</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-cta" href="#contact">Book a session</a>
+<!-- =========================================================
+  TEMPLATE NOTES (delete before publishing)
+  - Replace "Your Name", bio copy, stats, timeline and project
+    content with your own. Search for ALL-CAPS placeholders.
+  - Swap the initials in .avatar with an <img> if you have a photo.
+  - Update the mailto:/href links in the contact section.
+========================================================== -->
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="nav-mark">Data<span>.</span>analyst</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#tutoring">Tutoring</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 </header>
 
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="hero-inner">
-    <span class="eyebrow">Statistics tutoring — online &amp; Nairobi</span>
-    <h1>
-      Statistics, marked
-      <span class="mark-wrap">correct<svg viewBox="0 0 140 70" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8,38 C8,15 30,6 65,8 C105,10 130,20 128,40 C126,58 100,64 65,63 C30,62 8,55 8,38 Z"/>
-      </svg></span>.
-      <span class="annotation">nice!</span>
-    </h1>
-    <p class="lede">One-on-one statistics tutoring for university and high school students — hypothesis testing, R, SPSS, Excel, and the coursework that's actually due this week. Taught by a final-year Applied Statistics student who also works as a data analyst.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#contact">Book a session</a>
-      <a class="btn btn-ghost" href="#syllabus">See what's covered</a>
-    </div>
-  </div>
-</section>
-
-<section class="report">
-  <div class="report-inner">
-    <div class="report-photo"><img src="wins.jpg" alt="Okhala Winslaus Ondwasi"></div>
-    <div class="report-grid">
-      <div class="report-item">
-        <div class="label">Currently</div>
-        <div class="value">Final-year BSc Applied Statistics &amp; IT, MMUST — graduating Dec 2026</div>
-      </div>
-      <div class="report-item">
-        <div class="label">Field experience</div>
-        <div class="value">3-month statistical analyst attachment at PBORA</div>
-      </div>
-      <div class="report-item">
-        <div class="label">Also does</div>
-        <div class="value">Data analysis &amp; statistics teaching</div>
-      </div>
-      <div class="report-item">
-        <div class="label">Tools taught</div>
-        <div class="value">R / RStudio, SPSS, Excel, Python, MySQL</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="syllabus">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Syllabus</span>
-      <h2>What we can work on</h2>
-      <p>Pick one topic for a single session, or a running list for exam prep — sessions are built around what you actually need.</p>
+    <div>
+      <div class="hero-eyebrow">Data Analyst — Statistics Teacher — Tutor</div>
+      <h1>Hi, I'm <em>Okhala Winslaus Ondwasi</em>.<br>I fit the line and explain the curve.</h1>
+      <p class="tagline">I turn messy spreadsheets into decisions by day, and turn nervous students into confident analysts by evening — through analytics work and one-on-one statistics tutoring.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#tutoring">Book a tutoring session</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>4 yrs</strong>of analysis &amp; teaching</div>
+        <div><strong>40+</strong>datasets shipped</div>
+        <div><strong>60+</strong>students taught</div>
+        <div><strong>p.value &lt; .05</strong>always checked</div>
+      </div>
     </div>
-    <div class="syllabus-list">
-      <div class="unit">
+
+    <div class="hero-chart" aria-hidden="true">
+      <svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- axes -->
+        <line x1="30" y1="10" x2="30" y2="280" stroke="#3a4a72" stroke-width="1"/>
+        <line x1="30" y1="280" x2="360" y2="280" stroke="#3a4a72" stroke-width="1"/>
+        <text class="chart-label" x="150" y="308">EFFORT INVESTED</text>
+        <text class="chart-label" x="8" y="150" transform="rotate(-90 8 150)">INSIGHT GAINED</text>
+
+        <!-- confidence band -->
+        <polygon class="ci-band" points="40,240 350,70 350,110 40,270"></polygon>
+
+        <!-- scatter points -->
+        <circle class="dot" cx="55" cy="250" r="4"/>
+        <circle class="dot" cx="80" cy="230" r="4"/>
+        <circle class="dot" cx="110" cy="215" r="4"/>
+        <circle class="dot" cx="140" cy="205" r="4"/>
+        <circle class="dot" cx="150" cy="180" r="4"/>
+        <circle class="dot" cx="185" cy="175" r="4"/>
+        <circle class="dot" cx="210" cy="150" r="4"/>
+        <circle class="dot" cx="230" cy="160" r="4"/>
+        <circle class="dot" cx="255" cy="130" r="4"/>
+        <circle class="dot" cx="280" cy="118" r="4"/>
+        <circle class="dot" cx="300" cy="100" r="4"/>
+        <circle class="dot" cx="320" cy="95" r="4"/>
+
+        <!-- regression line -->
+        <line class="reg-line" x1="40" y1="255" x2="345" y2="85"/>
+
+        <!-- highlighted point -->
+        <circle class="dot-you" cx="270" cy="105" r="6"/>
+        <text class="chart-label" x="282" y="102" fill="#eac54f">you are here</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="grid-bg">
+  <div class="wrap">
+    <div class="eyebrow">about</div>
+    <h2 class="section-title">Proffessional Background</h2>
+    <p class="section-lede">I am a data analyst and researcher with a background in statistics, data analysis, and research. I currently work in a research and data-focused environment, where my work involves data collection and management, data cleaning, statistical analysis, research support, reporting, and translating data into meaningful insights for decision-making. My week typically involves working with tools such as R, Microsoft Excel, MySQL, Python, and other research and data-management platforms, while also developing my skills in data systems and teaching practical data analysis.
+
+</p>
+
+    <div class="about-grid">
+      <div class="avatar-card">
+        <div class="avatar">
+          <img src="wins.jpg" alt="Profile photo">
+        </div>
+        <ul class="facts">
+          <li><span>Based in</span><span>Nairobi-Kenya</span></li>
+          <li><span>Focus</span><span>Analytics &amp; Education.</span></li>
+          <li><span>Toolkit</span><span>R · SPSS . Python · KoboToolbox · MYSQL</span></li>
+          <li><span>Teaching</span><span>Statistics &amp; Data Analysis </span></li>
+          <li><span>Open to</span><span>Contract, Remote Jobs &amp; guest lectures</span></li>
+        </ul>
+      </div>
+
+      <div class="about-copy">
+        <p class="lead">I believe statistics is a language for making better decisions under uncertainty — and that most people never got to understand it well.</p>
+        <p>By day, I work as a data analyst, cleaning messy datasets, building models, and turning ambiguous business questions into testable hypotheses and clear dashboards.
+           By evening, I teach introductory and intermediate statistics, translating the same ideas — distributions, significance, regression — into language that actually sticks.</p>
+        <p>I have a strong background in statistics, data analysis, and research, with academic and practical experience in data management, statistical modelling, research methodology, 
+          and the use of analytical tools such as R, Microsoft Excel, SPSS, MySQL, and Python. Through working on diverse research and data-driven projects, I developed a strong 
+          interest in teaching, particularly in equipping learners with practical, industry-relevant analytical skills and empowering them to use data effectively for informed decision-making.
+</p>
+        <p>Outside of spreadsheets, I'm usually reading about data science, technology, business, and emerging trends, exploring new analytical tools and ideas, or keeping active through fitness and outdoor activities. I also enjoy reading, connecting with people, and following developments in Kenya and beyond—especially those shaping careers, innovation, and the future of work. And, of course, I firmly believe that a well-labelled axis is a form of kindness.
+</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">02 — Skills</div>
+    <h2 class="section-title">The stack</h2>
+    <p class="section-lede">What I use to get from raw data to a defensible conclusion — and to get a classroom from confused to confident.</p>
+
+    <div class="skills-cols">
+      <div class="skills-group analysis">
+        <h3>Analysis &amp; Tools</h3>
+        <div class="bar-row" style="--pct:92%">
+          <div class="bar-row-head"><span>R &amp; tidyverse</span><span>92%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" style="--pct:88%">
+          <div class="bar-row-head"><span>Python (pandas, statsmodels)</span><span>88%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" style="--pct:85%">
+          <div class="bar-row-head"><span>MYSQL</span><span>85%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" style="--pct:78%">
+          <div class="bar-row-head"><span>Microsoft Excel / Power BI</span><span>78%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" style="--pct:70%">
+          <div class="bar-row-head"><span>Experimental design &amp; A/B testing</span><span>70%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+      </div>
+
+      <div class="skills-group teach">
+        <h3>Teaching &amp; Communication</h3>
+        <div class="bar-row" style="--pct:95%">
+          <div class="bar-row-head"><span>Curriculum design</span><span>95%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" style="--pct:90%">
+          <div class="bar-row-head"><span>Explaining stats to non-stats people</span><span>90%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" style="--pct:84%">
+          <div class="bar-row-head"><span>Public speaking &amp; workshops</span><span>84%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" style="--pct:80%">
+          <div class="bar-row-head"><span>Data storytelling / dashboards</span><span>80%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" style="--pct:75%">
+          <div class="bar-row-head"><span>Grading &amp; assessment design</span><span>75%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="grid-bg">
+  <div class="wrap">
+    <div class="eyebrow">03 — Experience</div>
+    <h2 class="section-title">Timeline</h2>
+    <p class="section-lede">Where I've analyzed data and where I've taught people to analyze it themselves.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">September 2022 — April 2026</div>
+        <div class="tl-role">Mathematics and Statistics Students Association Tutor</div>
+        <div class="tl-org">Masinde Muliro University of Science And Technology</div>
+        <div class="tl-desc">Own reporting and experimentation for the growth team; built the analytics stack used to evaluate every product test.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2026 — July 2026</div>
+        <div class="tl-role">Industrial Attachment</div>
+        <div class="tl-org">Public Benefit Organizatins Regulatory Authority (PBORA)</div>
+        <div class="tl-desc">Analysed real world datasets, devloped and managed MYSQL database, Developed and Deployed KoboToolbox forms, Report writing on analysed data using TexStudio.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TUTORING ============ -->
+<section id="tutoring" class="tutoring">
+  <div class="wrap">
+    <div class="tut-head">
+      <div>
+        <div class="eyebrow">Tutoring</div>
+        <h2 class="section-title">Statistics, <span class="stamp-wrap">marked correct<svg viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg"><path d="M10,40 C10,18 35,8 80,10 C130,12 165,22 162,42 C159,60 125,66 80,65 C35,64 10,58 10,40 Z"/></svg></span>.</h2>
+        <p class="section-lede">One-on-one statistics tutoring for university and high school students — online or in Nairobi. Taught by a final-year Applied Statistics student who also works as a data analyst.</p>
+      </div>
+      <div class="tut-rates">
+        <div class="row"><span>Format</span><span>Online (Meet/Zoom) or in-person, Nairobi</span></div>
+        <div class="row"><span>Rates</span><span>Contact for a quote</span></div>
+        <div class="row"><span>Levels</span><span>High school · University · Postgraduate</span></div>
+      </div>
+    </div>
+
+    <div class="syllabus">
+      <div class="syl-unit">
         <div class="num">01</div>
-        <div><h3>Statistical hypothesis testing</h3><p>t-tests, chi-square, ANOVA — setting up the right test and reading the output correctly.</p></div>
+        <div><h4>Statistical hypothesis testing</h4><p>t-tests, chi-square, ANOVA — setting up the right test and reading the output correctly.</p></div>
       </div>
-      <div class="unit">
+      <div class="syl-unit">
         <div class="num">02</div>
-        <div><h3>Quantitative &amp; qualitative data analysis</h3><p>Cleaning real datasets, coding qualitative responses, and choosing methods that fit the data you actually have.</p></div>
+        <div><h4>Quantitative &amp; qualitative data analysis</h4><p>Cleaning real datasets and choosing methods that fit the data you actually have.</p></div>
       </div>
-      <div class="unit">
+      <div class="syl-unit">
         <div class="num">03</div>
-        <div><h3>R &amp; RStudio</h3><p>From first script to a finished analysis — data wrangling, visualization, and reproducible reports.</p></div>
+        <div><h4>R, RStudio, SPSS &amp; Excel</h4><p>From first script to a finished analysis, or the tables and outputs your coursework needs.</p></div>
       </div>
-      <div class="unit">
+      <div class="syl-unit">
         <div class="num">04</div>
-        <div><h3>SPSS &amp; Advanced Excel</h3><p>Building the tables and outputs your coursework or project actually asks for, without the guesswork.</p></div>
+        <div><h4>Project &amp; thesis data support</h4><p>Working through the analysis chapter of a university project — methodology, results, interpretation.</p></div>
       </div>
-      <div class="unit">
-        <div class="num">05</div>
-        <div><h3>Survey &amp; data collection design</h3><p>Building forms in KoboToolbox and structuring data collection for field research or class projects.</p></div>
-      </div>
-      <div class="unit">
-        <div class="num">06</div>
-        <div><h3>Project &amp; thesis data support</h3><p>Working through the analysis chapter of a university project — methodology, results, and interpretation.</p></div>
-      </div>
+    </div>
+
+    <div class="tut-steps">
+      <div class="tut-step"><span class="n">1</span><h5>Send your topic</h5><p>Message with what you're stuck on and when you need it sorted.</p></div>
+      <div class="tut-step"><span class="n">2</span><h5>Agree a time</h5><p>Online by default, in person if you're in Nairobi.</p></div>
+      <div class="tut-step"><span class="n">3</span><h5>Have the session</h5><p>Worked examples, screen-shared, using your own data where possible.</p></div>
+      <div class="tut-step"><span class="n">4</span><h5>Keep the notes</h5><p>Leave with an annotated script or solution you can reuse.</p></div>
+    </div>
+
+    <div class="tut-cta">
+      <a class="btn btn-wa" href="https://wa.me/254715672799?text=Hi%2C%20I%27d%20like%20to%20book%20a%20statistics%20tutoring%20session." target="_blank" rel="noopener">Message on WhatsApp</a>
+      <a class="btn btn-ghost" style="border-color:var(--line); color:var(--text-main);" href="mailto:Winslausokhala@gmail.com?subject=Statistics%20tutoring%20—%20booking%20request">Email instead</a>
     </div>
   </div>
 </section>
 
-<section id="how" style="background:#fff; border-top:1px solid var(--paper-line); border-bottom:1px solid var(--paper-line);">
+<!-- ============ PHILOSOPHY ============ -->
+<section id="philosophy">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Process</span>
-      <h2>How a session works</h2>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="step-num">1</span><h4>Send your topic</h4><p>Message on WhatsApp or email with what you're stuck on and when you need it sorted by.</p></div>
-      <div class="step"><span class="step-num">2</span><h4>Agree a time</h4><p>We fix a slot that works for both of us — online by default, in person if you're in Nairobi.</p></div>
-      <div class="step"><span class="step-num">3</span><h4>Have the session</h4><p>Screen-shared walkthroughs, worked examples, and your own data or dataset wherever possible.</p></div>
-      <div class="step"><span class="step-num">4</span><h4>Keep the notes</h4><p>You leave with worked solutions or an annotated script you can reuse for the exam or the next dataset.</p></div>
+    <div class="eyebrow">04 — Philosophy</div>
+    <h2 class="section-title">Why I teach the way I analyze</h2>
+    <p class="section-lede">One idea I keep coming back to, in the classroom and in the spreadsheet.</p>
+
+    <div class="callout">
+      <blockquote>"A statistic without context is just a number wearing a costume. My job — as an analyst and as a teacher — is the same: ask what the data can't tell you, before trusting what it can."</blockquote>
+      <cite></cite>
     </div>
   </div>
 </section>
 
-<section id="format">
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="grid-bg">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Format</span>
-      <h2>Online or in Nairobi</h2>
-    </div>
-    <div class="format-band">
-      <div class="format-item">
-        <div class="label">Online</div>
-        <div class="value">Google Meet / Zoom</div>
-        <p>Anywhere, screen-shared, session recording on request.</p>
+    <div class="eyebrow">05 — Selected Work</div>
+    <h2 class="section-title">Case studies &amp; courses</h2>
+    <p class="section-lede">A few things I've analyzed, built, or taught recently.</p>
+
+    <div class="cards">
+      <div class="card">
+        <svg viewBox="0 0 200 56" preserveAspectRatio="none"><polyline points="0,45 20,40 40,42 60,30 80,32 100,18 120,22 140,10 160,14 180,6 200,10" fill="none" stroke="#c1443c" stroke-width="2"/></svg>
+        <h3>PROJECT TITLE ONE</h3>
+        <p>Comming soon.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">A/B test</span><span class="tag">SQL</span></div>
       </div>
-      <div class="format-item">
-        <div class="label">In person</div>
-        <div class="value">Nairobi</div>
-        <p>By arrangement, for a location that works for both of us.</p>
+      <div class="card">
+        <svg viewBox="0 0 200 56" preserveAspectRatio="none"><polyline points="0,50 20,44 40,20 60,26 80,15 100,30 120,12 140,20 160,8 180,18 200,5" fill="none" stroke="#3f8f82" stroke-width="2"/></svg>
+        <h3>PROJECT TITLE TWO</h3>
+        <p>Comming soon.
+        <div class="tags"><span class="tag">R</span><span class="tag">Forecasting</span><span class="tag">Tableau</span></div>
       </div>
-      <div class="format-item">
-        <div class="label">Rates</div>
-        <div class="value">Contact for a quote</div>
-        <p>Depends on topic, level, and whether it's a single session or a package.</p>
+      <div class="card">
+        <svg viewBox="0 0 200 56" preserveAspectRatio="none"><polyline points="0,40 20,42 40,25 60,28 80,10 100,18 120,8 140,15 160,6 180,12 200,4" fill="none" stroke="#eac54f" stroke-width="2"/></svg>
+        <h3>COURSE / WORKSHOP TITLE</h3>
+        <p>Comming soon.</p>
+        <div class="tags"><span class="tag">Curriculum</span><span class="tag">Public speaking</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Get in touch</span>
-      <h2>Book a session</h2>
-      <p>Fill this in and send it straight to WhatsApp or email — whichever you'd rather use.</p>
-    </div>
-    <div class="contact-grid">
-      <form id="tutor-form">
-        <div class="field">
-          <label for="f-name">Your name</label>
-          <input id="f-name" type="text" placeholder="Full name" required>
-        </div>
-        <div class="field">
-          <label for="f-topic">Topic / subject</label>
-          <input id="f-topic" type="text" placeholder="e.g. Hypothesis testing, R for my project" required>
-        </div>
-        <div class="field">
-          <label for="f-level">Level</label>
-          <select id="f-level">
-            <option>High school</option>
-            <option selected>University</option>
-            <option>Postgraduate / research</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-message">Message</label>
-          <textarea id="f-message" placeholder="What you need help with, and when."></textarea>
-        </div>
-        <div class="contact-actions">
-          <button type="button" class="btn btn-wa" id="send-wa">Send via WhatsApp</button>
-          <button type="button" class="btn btn-email" id="send-email">Send via email</button>
-        </div>
-        <p class="form-note">Opens WhatsApp or your email app with your message pre-filled — nothing is stored on this site.</p>
-      </form>
+    <div class="eyebrow">06 — Feedback</div>
+    <h2 class="section-title">What people say</h2>
+    <p class="section-lede"></p>
 
-      <div class="direct-contact">
-        <div class="row">
-          <div class="label">WhatsApp</div>
-          <a href="https://wa.me/254715672799" target="_blank" rel="noopener">+254 715 672 799</a>
-        </div>
-        <div class="row">
-          <div class="label">Email</div>
-          <a href="mailto:Winslausokhala@gmail.com">Winslausokhala@gmail.com</a>
-        </div>
-        <div class="row">
-          <div class="label">LinkedIn</div>
-          <a href="https://www.linkedin.com/in/winslaus-okhala-861024409" target="_blank" rel="noopener">winslaus-okhala</a>
-        </div>
-        <div class="row">
-          <div class="label">Full CV</div>
-          <a href="okhala-resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
-        </div>
+    <div class="quotes">
+      <div class="quote-card">
+        <div class="val">STUDENT FEEDBACK</div>
+        <p>"Comming soon."</p>
+        <footer>— STUDENT NAME, COURSE / YEAR</footer>
+      </div>
+      <div class="quote-card">
+        <div class="val">COLLEAGUE FEEDBACK</div>
+        <p>"Comming soon."</p>
+        <footer>— COLLEAGUE NAME, ROLE</footer>
       </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div>&copy; 2026 Okhala Winslaus Ondwasi — Statistics Tutoring · <a href="https://angelvanywinner.github.io/">Portfolio</a> · <a href="mailto:Winslausokhala@gmail.com">Winslausokhala@gmail.com</a></div>
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--text-on-ink-muted)">07 — Contact</div>
+    <h2 class="section-title">Let's talk data</h2>
+    <p class="section-lede">Open to analytics contracts, guest lectures, and coffee chats about statistics education.</p>
+
+    <div class="kv">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Winslausokhala@gmail.com" target="_blank" rel="noopener"><span class="k">email:</span> Winslausokhala@gmail.com</a>
+      <a href="https://wa.me/254715672799" target="_blank" rel="noopener"><span class="k">whatsapp:</span> +254 715 672 799</a>
+      <a href="https://www.linkedin.com/in/winslaus-okhala-861024409" target="_blank" rel="noopener"><span class="k">linkedin:</span> linkedin.com/in/winslaus-okhala-861024409</a>
+      <a href="https://github.com/AngelVanywinner" target="_blank" rel="noopener"><span class="k">github:</span> github.com/AngelVanywinner</a>
+      <a href="okhala-resume.pdf" download><span class="k">resume:</span> download.pdf</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Okhala Winslaus Ondwasi</span>
+    <span>last updated AUGUST 2026</span>
+  </div>
 </footer>
 
 <script>
-  function buildMessage(){
-    var name = document.getElementById('f-name').value.trim();
-    var topic = document.getElementById('f-topic').value.trim();
-    var level = document.getElementById('f-level').value;
-    var message = document.getElementById('f-message').value.trim();
-    var lines = [];
-    lines.push("Hi, I'd like to book a statistics tutoring session.");
-    if(name) lines.push("Name: " + name);
-    if(topic) lines.push("Topic: " + topic);
-    if(level) lines.push("Level: " + level);
-    if(message) lines.push("Details: " + message);
-    return lines.join("\n");
-  }
+  // reveal-on-scroll for sections and skill bars
+  const revealTargets = document.querySelectorAll('.about-grid, .cards, .quotes, .timeline, .callout, .skills-cols, .tutoring');
+  revealTargets.forEach(el => el.classList.add('reveal'));
 
-  document.getElementById('send-wa').addEventListener('click', function(){
-    var text = encodeURIComponent(buildMessage());
-    window.open('https://wa.me/254715672799?text=' + text, '_blank');
-  });
+  const barRows = document.querySelectorAll('.bar-row');
 
-  document.getElementById('send-email').addEventListener('click', function(){
-    var subject = encodeURIComponent('Statistics tutoring — booking request');
-    var body = encodeURIComponent(buildMessage());
-    window.location.href = 'mailto:Winslausokhala@gmail.com?subject=' + subject + '&body=' + body;
-  });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        if(entry.target.classList.contains('skills-cols')){
+          barRows.forEach(r => r.classList.add('revealed'));
+        }
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .15 });
+
+  revealTargets.forEach(el => io.observe(el));
 </script>
 
 </body>
