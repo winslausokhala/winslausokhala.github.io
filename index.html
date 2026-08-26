@@ -423,6 +423,65 @@
     background:var(--paper); border:1px solid var(--line); color:var(--text-muted);
   }
 
+  /* ============ JOB BOT CASE STUDY ============ */
+  .job-bot-case{ background:var(--ink); color:var(--text-on-ink); }
+  .job-bot-case .eyebrow{ color:var(--text-on-ink-muted); }
+  .job-bot-case .eyebrow::before{ background:var(--chalk); }
+  .job-bot-case .section-title{ color:#fff; }
+  .job-bot-case .section-lede{ color:var(--text-on-ink-muted); }
+
+  .case-panel{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:2.8rem;
+    align-items:start;
+    margin-top:2.6rem;
+  }
+  @media (max-width:900px){ .case-panel{ grid-template-columns:1fr; } }
+  .case-copy p{ color:var(--text-on-ink-muted); margin:0 0 1.1em; max-width:62ch; }
+  .case-copy p:first-child{ color:var(--text-on-ink); }
+
+  .case-stats{
+    background:rgba(238,240,246,.04);
+    border:1px solid rgba(238,240,246,.16);
+    border-radius:6px;
+    padding:1.5rem 1.6rem;
+    font-family:var(--mono);
+  }
+  .case-stats-head{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:.4rem .8rem;
+    font-size:.68rem; color:var(--text-on-ink-muted);
+    padding-bottom:1rem; margin-bottom:1.3rem;
+    border-bottom:1px dashed rgba(238,240,246,.18);
+  }
+  .case-stats-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:1.4rem 1rem;
+    margin-bottom:1.3rem;
+  }
+  .case-stats-grid strong{
+    display:block; font-size:1.8rem; color:var(--chalk); font-weight:600; line-height:1;
+    margin-bottom:.35em;
+  }
+  .case-stats-grid div:nth-child(2) strong,
+  .case-stats-grid div:nth-child(3) strong{ color:var(--teal); }
+  .case-stats-grid span{
+    font-size:.68rem; color:var(--text-on-ink-muted);
+    letter-spacing:.03em; text-transform:uppercase;
+  }
+  .case-stats-foot{
+    font-size:.72rem; color:var(--teal); padding-top:1rem;
+    border-top:1px dashed rgba(238,240,246,.18);
+    display:flex; align-items:center; gap:.5em;
+  }
+  .case-stats-foot::before{
+    content:""; width:6px; height:6px; border-radius:50%;
+    background:var(--teal); display:inline-block; flex-shrink:0;
+  }
+  .case-stats-note{
+    font-size:.66rem; color:var(--text-on-ink-muted);
+    margin-top:.9rem; line-height:1.5;
+  }
+
   /* ============ TESTIMONIALS ============ */
   .quotes{
     display:grid;
@@ -553,6 +612,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#tutoring">Tutoring</a></li>
       <li><a href="#projects">Work</a></li>
+      <li><a href="#job-bot">Job Bot</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -826,10 +886,46 @@
   </div>
 </section>
 
+<!-- ============ JOB BOT CASE STUDY ============ -->
+<section id="job-bot" class="job-bot-case">
+  <div class="wrap">
+    <div class="eyebrow">06 — Case Study</div>
+    <h2 class="section-title">I automated my own job hunt.</h2>
+    <p class="section-lede">A Gmail-based bot that scans job-alert emails, scores them against my CV, and drafts the applications — so I only spend time on the ones worth sending.</p>
+
+    <div class="case-panel">
+      <div class="case-copy">
+        <p>Job-alert emails pile up fast, and most of them aren't worth opening. I built a Python tool that reads every job-alert email in my Gmail and scores each listing against my CV — Data Analyst, Statistician, Junior Data Scientist, Research Assistant, Database/Data Management, and Graduate Trainee roles all count, and I tuned the matching to keep entry-level data-entry roles in while screening out off-topic listings, like finance-only "graduate trainee" postings.</p>
+        <p>It doesn't touch LinkedIn directly or auto-apply anywhere — that crosses into ToS territory I'd rather avoid. Instead, for every strong match it writes a tailored draft straight into my Gmail Drafts folder. I still read and send every application myself; the bot just does the sorting and the first pass at the cover letter.</p>
+        <p>It runs on its own schedule — a self-contained loop that rechecks every 60 minutes — and I built a small desktop app around it (Preview, Create Drafts, Auto Mode) so I never have to open a terminal to run it.</p>
+      </div>
+
+      <div class="case-stats">
+        <div class="case-stats-head">
+          <span>run started 26 aug 2026, 12:48</span>
+          <span>gmail job scanner v1</span>
+        </div>
+        <div class="case-stats-grid">
+          <div><strong>23</strong><span>alerts scanned</span></div>
+          <div><strong>6</strong><span>matched my CV</span></div>
+          <div><strong>6</strong><span>drafts ready</span></div>
+          <div><strong>0</strong><span>minutes spent</span></div>
+        </div>
+        <div class="case-stats-foot">drafts waiting in Gmail for review</div>
+        <div class="case-stats-note">Figures from one scan run — the bot never sends anything on its own.</div>
+      </div>
+    </div>
+
+    <div class="tags" style="margin-top:2.2rem;">
+      <span class="tag">Python</span><span class="tag">Gmail API</span><span class="tag">Tkinter</span><span class="tag">Automation</span>
+    </div>
+  </div>
+</section>
+
 <!-- ============ TESTIMONIALS ============ -->
 <section id="testimonials">
   <div class="wrap">
-    <div class="eyebrow">06 — Feedback</div>
+    <div class="eyebrow">07 — Feedback</div>
     <h2 class="section-title">What people say</h2>
     <p class="section-lede"></p>
 
@@ -851,7 +947,7 @@
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--text-on-ink-muted)">07 — Contact</div>
+    <div class="eyebrow" style="color:var(--text-on-ink-muted)">08 — Contact</div>
     <h2 class="section-title">Let's talk data</h2>
     <p class="section-lede">Open to analytics contracts, guest lectures, and coffee chats about statistics education.</p>
 
@@ -874,7 +970,7 @@
 
 <script>
   // reveal-on-scroll for sections and skill bars
-  const revealTargets = document.querySelectorAll('.about-grid, .cards, .quotes, .timeline, .callout, .skills-cols, .tutoring');
+  const revealTargets = document.querySelectorAll('.about-grid, .cards, .quotes, .timeline, .callout, .skills-cols, .tutoring, .case-panel');
   revealTargets.forEach(el => el.classList.add('reveal'));
 
   const barRows = document.querySelectorAll('.bar-row');
